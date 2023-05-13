@@ -12,8 +12,7 @@
 
 <!--- snake -->
 <div align="center">
-  <img  src="https://github.com/1999AZZAR/1999AZZAR/blob/main/resources/img/grid-snake.svg"
-       alt="snake" /></a>
+  <img  src="grid-snake.svg" alt="snake" /></a>
 </div>
 
 
@@ -48,9 +47,9 @@
 <p align="center">
   <!--- stats (start) -->
 <a href="https://github.com/Estiknok">
-  <img  align="center" height="180em" src="https://github-readme-stats.vercel.app/api?username=EstiknoK&theme=dark&show_icons=true&count_private=true" />
+  <img align="center" height="150em" src="https://github-readme-stats.vercel.app/api?username=EstiknoK&theme=dark&show_icons=true&count_private=true" />
 
-  <img align="center" height="180em" src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=Estiknok&layout=compact&langs_count=8&theme=dark"/>
+  <img align="center" height="150em" src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=Estiknok&layout=compact&langs_count=8&theme=dark"/>
 </a>
 <!--- stats (end) -->
 
