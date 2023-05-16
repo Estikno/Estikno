@@ -2,6 +2,11 @@
 /* -------- General CSS -------- */
 /* ============================= */
 
+:root{
+    --backgroundColor1: #111111;
+    --backgroundColor2: #151515;
+}
+
 body {
     color: #666666;
     font-family: 'Open Sans', sans-serif;
@@ -82,10 +87,12 @@ h6 {
     height: 100%;
     left: 0;
     top: 0;
-    background: url(../img/top-header.jpg) left top repeat;
+    /*background: url(../img/top-header.jpg) left top repeat; */
+    background: linear-gradient(to right, rgba(0, 98, 185, 0.8), rgba(0, 98, 185, 0.8)), url(../svg/common-bg.svg);
+    background-position: center;
     background-size: cover;
-    filter: blur(8px);
-    -webkit-filter: blur(8px);
+    /* filter: blur(8px);
+    -webkit-filter: blur(8px); */
     z-index: -1;
 }
 
@@ -133,7 +140,8 @@ h6 {
 /* ============================= */
 
 .header {
-    background: #AF9483;
+    /*background: #AF9483; */
+    background: var(--backgroundColor1);
     height: 70px;
 }
 
