@@ -2,20 +2,22 @@
 /* -------- General CSS -------- */
 /* ============================= */
 
-:root{
-    --backgroundColor1: #111111;
-    --backgroundColor2: #151515;
+:root {
+    --Color1: 34, 40, 49;
+    --Color2: 57, 62, 70;
+    --Color3: 0, 173, 181;
+    --Color4: 238, 238, 238;
 }
 
 body {
     color: #666666;
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-weight: 300;
     background: #ffffff;
 }
 
 a {
-    color: #AF9483;
+    color: #af9483;
     transition: 0.5s;
 }
 
@@ -38,7 +40,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Solway', serif;
+    font-family: "Solway", serif;
     color: #666666;
     margin: 0 0 15px 0;
     padding: 0;
@@ -47,7 +49,7 @@ h6 {
 .back-to-top {
     position: fixed;
     display: none;
-    background: #AF9483;
+    background: #af9483;
     color: #ffffff;
     width: 44px;
     height: 44px;
@@ -66,8 +68,6 @@ h6 {
     color: #ffffff;
 }
 
-
-
 /* ============================= */
 /* ------ Top Header CSS ------- */
 /* ============================= */
@@ -78,17 +78,73 @@ h6 {
     width: 100%;
     height: 100vh;
     color: #ffffff;
+
+    .home-hero__mouse-scroll-cont {
+        position: absolute;
+        bottom: 3%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    @media only screen and (max-width: 37.5em) {
+        .home-hero__mouse-scroll-cont {
+            display: none;
+        }
+    }
+}
+
+.mouse {
+    width: 25px;
+    height: 40px;
+    border: 2px solid #eee;
+    border-radius: 60px;
+    position: relative;
+    overflow: hidden;
+}
+
+.mouse::before {
+    content: "";
+    width: 5px;
+    height: 5px;
+    position: absolute;
+    top: 7px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #eee;
+    border-radius: 50%;
+    opacity: 1;
+    animation: wheel 1.3s infinite;
+    -webkit-animation: wheel 1.3s infinite;
+}
+
+@keyframes wheel {
+    to {
+        opacity: 0;
+        top: 27px;
+    }
+}
+
+@-webkit-keyframes wheel {
+    to {
+        opacity: 0;
+        top: 27px;
+    }
 }
 
 .top-header:after {
-    content: '';
+    content: "";
     position: absolute;
     width: 100%;
     height: 100%;
     left: 0;
     top: 0;
     /*background: url(../img/top-header.jpg) left top repeat; */
-    background: linear-gradient(to right, rgba(0, 98, 185, 0.8), rgba(0, 98, 185, 0.8)), url(../svg/common-bg.svg);
+    background: linear-gradient(
+            to right,
+            rgba(var(--Color3), 0.8),
+            rgba(var(--Color3), 0.8)
+        ),
+        url(../svg/common-bg.svg);
     background-position: center;
     background-size: cover;
     /* filter: blur(8px);
@@ -107,7 +163,7 @@ h6 {
 .top-header img {
     height: 200px;
     margin-bottom: 30px;
-    border: 15px solid rgba(256, 256, 256, .1);
+    border: 15px solid rgba(256, 256, 256, 0.1);
 }
 
 .top-header h1 {
@@ -133,15 +189,13 @@ h6 {
     font-size: 3vw;
 }
 
-
-
 /* ============================= */
 /* -------- Header CSS --------- */
 /* ============================= */
 
 .header {
     /*background: #AF9483; */
-    background: var(--backgroundColor1);
+    background: rgb(var(--Color1));
     height: 70px;
 }
 
@@ -167,11 +221,11 @@ h6 {
     .header {
         height: 50px;
     }
-    
+
     .header .logo {
         margin: 10px 0 0 0;
     }
-    
+
     .header .logo h1 {
         padding: 2px 0;
         font-size: 26px;
@@ -192,7 +246,8 @@ h6 {
     color: rgba(255, 255, 255, 0.75);
 }
 
-.nav-menu, .nav-menu * {
+.nav-menu,
+.nav-menu * {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -288,7 +343,7 @@ h6 {
 }
 
 .nav-menu ul li:hover {
-    background: #AF9483;
+    background: #af9483;
     -webkit-transition: 0.3s;
     -o-transition: 0.3s;
     transition: 0.3s;
@@ -335,7 +390,7 @@ h6 {
     #mobile-nav-toggle {
         display: inline;
     }
-    
+
     .logo {
         width: 100%;
         text-align: center;
@@ -397,11 +452,11 @@ h6 {
 }
 
 #mobile-nav ul .menu-has-children i.fa-chevron-up {
-    color: #AF9483;
+    color: #af9483;
 }
 
 #mobile-nav ul .menu-item-active {
-    color: #AF9483;
+    color: #af9483;
 }
 
 #mobile-body-overly {
@@ -427,8 +482,6 @@ body.mobile-nav-active #mobile-nav-toggle {
     color: #ffffff;
 }
 
-
-
 /* ============================= */
 /* ------- Header Title -------- */
 /* ============================= */
@@ -436,19 +489,19 @@ body.mobile-nav-active #mobile-nav-toggle {
 .section-header h2,
 .section-header h3 {
     display: inline-block;
-    color: #AF9483;
+    color: #af9483;
     font-size: 35px;
     text-transform: capitalize;
     text-align: left;
     font-weight: 700;
     position: relative;
     padding-bottom: 5px;
-    border-bottom: 1px solid #AF9483;
+    border-bottom: 1px solid #af9483;
 }
 
 .section-header h2::before,
 .section-header h3::before {
-    content: '';
+    content: "";
     position: absolute;
     display: block;
     width: 0;
@@ -457,12 +510,12 @@ body.mobile-nav-active #mobile-nav-toggle {
     right: 0;
     border-top: 10px solid;
     border-right: 10px solid;
-    border-color: transparent #AF9483;
+    border-color: transparent #af9483;
 }
 
 .section-header h2::after,
 .section-header h3::after {
-    content: '';
+    content: "";
     position: absolute;
     display: block;
     width: 0;
@@ -471,7 +524,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     left: 0;
     border-top: 10px solid;
     border-left: 10px solid;
-    border-color: transparent #AF9483;
+    border-color: transparent #af9483;
 }
 
 .section-header p {
@@ -484,8 +537,6 @@ body.mobile-nav-active #mobile-nav-toggle {
         width: 70%;
     }
 }
-
-
 
 /* ============================= */
 /* ------- About Me CSS -------- */
@@ -523,16 +574,16 @@ body.mobile-nav-active #mobile-nav-toggle {
 .about a {
     display: inline-block;
     padding: 6px 20px;
-    color: #AF9483;
+    color: #af9483;
     font-size: 16px;
     font-weight: 400;
     letter-spacing: 1px;
-    border: 1px solid #AF9483;
+    border: 1px solid #af9483;
 }
 
 .about a:hover {
     color: #ffffff;
-    background: #AF9483;
+    background: #af9483;
 }
 
 .about .skills h3 {
@@ -564,11 +615,9 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .about .progress .progress-bar {
-    background: #AF9483;
+    background: #af9483;
     border-radius: 0;
 }
-
-
 
 /* ============================= */
 /* ------- Experience CSS ------ */
@@ -580,7 +629,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .experience .section-header p {
-    margin:0;
+    margin: 0;
 }
 
 .experience .exp-column {
@@ -596,7 +645,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     top: 30px;
     right: 100%;
     left: 15px;
-    background: #AF9483;
+    background: #af9483;
 }
 
 .experience .exp-column::after {
@@ -606,16 +655,16 @@ body.mobile-nav-active #mobile-nav-toggle {
     bottom: 0;
     right: 15px;
     left: 100%;
-    background: #AF9483;
+    background: #af9483;
 }
 
 .experience .exp-column:hover::before {
-    transition: .3s;
+    transition: 0.3s;
     right: 15px;
 }
 
 .experience .exp-column:hover::after {
-    transition: .3s;
+    transition: 0.3s;
     left: 15px;
 }
 
@@ -634,7 +683,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 .experience .exp-company {
     margin-bottom: 0;
-    color: #AF9483;
+    color: #af9483;
     font-size: 18px;
     font-weight: 400;
 }
@@ -651,8 +700,6 @@ body.mobile-nav-active #mobile-nav-toggle {
     margin-bottom: 0;
 }
 
-
-
 /* ============================= */
 /* -------- Services CSS ------- */
 /* ============================= */
@@ -668,14 +715,14 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .services .section-header p {
-    margin:0;
+    margin: 0;
 }
 
 .services .single-service {
     position: relative;
     text-align: center;
     font-weight: 300;
-    margin:30px 0 0;
+    margin: 30px 0 0;
     padding: 25px 15px 30px 15px;
     background: #e9ecef;
 }
@@ -687,7 +734,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     top: 0;
     right: 100%;
     left: 0;
-    background: #AF9483;
+    background: #af9483;
 }
 
 .services .single-service::after {
@@ -697,16 +744,16 @@ body.mobile-nav-active #mobile-nav-toggle {
     bottom: 0;
     right: 0;
     left: 100%;
-    background: #AF9483;
+    background: #af9483;
 }
 
 .services .single-service:hover::before {
-    transition: .3s;
+    transition: 0.3s;
     right: 0;
 }
 
 .services .single-service:hover::after {
-    transition: .3s;
+    transition: 0.3s;
     left: 0;
 }
 
@@ -716,7 +763,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     margin: 0 auto 20px;
     text-align: center;
     width: 120px;
-    color: #AF9483;
+    color: #af9483;
 }
 
 .services .single-service h4,
@@ -743,8 +790,6 @@ body.mobile-nav-active #mobile-nav-toggle {
     transition: 0.5s;
 }
 
-
-
 /* ============================= */
 /* -------- Counter CSS -------- */
 /* ============================= */
@@ -754,7 +799,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     position: relative;
     text-align: center;
     color: #ffffff;
-    background: #AF9483;
+    background: #af9483;
 }
 
 .counters .counter .counter-icon-box {
@@ -773,7 +818,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     margin: 0 0 15px;
     color: #ffffff;
     font-weight: 700;
-    font-family: 'Solway', serif;
+    font-family: "Solway", serif;
 }
 
 .counters .number:after {
@@ -793,8 +838,6 @@ body.mobile-nav-active #mobile-nav-toggle {
     font-weight: 400;
     text-transform: uppercase;
 }
-
-
 
 /* ============================= */
 /* ------- Portfolio CSS ------- */
@@ -822,18 +865,18 @@ body.mobile-nav-active #mobile-nav-toggle {
     margin: 15px -3px 5px -3px;
     display: inline-block;
     padding: 10px 15px;
-    color: #AF9483;
+    color: #af9483;
     font-size: 14px;
     line-height: 15px;
     text-transform: uppercase;
-    border: 1px solid #AF9483;
+    border: 1px solid #af9483;
     background: #ffffff;
     transition: all 0.3s ease-in-out;
 }
 
 .portfolio #portfolio-flters li:hover,
 .portfolio #portfolio-flters li.filter-active {
-    background: #AF9483;
+    background: #af9483;
     color: #ffffff;
 }
 
@@ -848,12 +891,12 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .portfolio .portfolio-item figure {
-    background: #AF9483;
+    background: #af9483;
     overflow: hidden;
     height: 220px;
     position: relative;
     border-radius: 0;
-    margin: 0; 
+    margin: 0;
 }
 
 .portfolio .portfolio-item figure:hover img {
@@ -883,7 +926,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 .portfolio .portfolio-item figure .link-preview:hover,
 .portfolio .portfolio-item figure .link-details:hover {
-    background: #AF9483;
+    background: #af9483;
 }
 
 .portfolio .portfolio-item figure .link-preview:hover i,
@@ -913,14 +956,14 @@ body.mobile-nav-active #mobile-nav-toggle {
     font-size: 18px;
     font-weight: 400;
     text-transform: capitalize;
-    background: rgba(256, 256, 256, .8);
+    background: rgba(256, 256, 256, 0.8);
     border-radius: 0;
 }
 
 .portfolio .portfolio-item figure .portfolio-title span {
     display: block;
     margin-top: 10px;
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-size: 12px;
     font-weight: 300;
     text-transform: uppercase;
@@ -941,8 +984,6 @@ body.mobile-nav-active #mobile-nav-toggle {
     top: 50%;
 }
 
-
-
 /* ============================= */
 /* ------ Testimonials CSS ----- */
 /* ============================= */
@@ -960,7 +1001,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .testimonials::before {
-    content: '';
+    content: "";
     position: absolute;
     left: 0;
     right: 0;
@@ -974,10 +1015,9 @@ body.mobile-nav-active #mobile-nav-toggle {
     z-index: 9;
 }
 
-
 .testimonials i {
     padding: 20px 0;
-    color: #AF9483;
+    color: #af9483;
 }
 
 .testimonials .testimonial-item {
@@ -986,7 +1026,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 .testimonials .testimonial-item .testimonial-img {
     width: 120px;
-    border: 10px solid rgba(256, 256, 256, .1);
+    border: 10px solid rgba(256, 256, 256, 0.1);
     margin: 0 auto;
 }
 
@@ -994,7 +1034,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     font-size: 20px;
     font-weight: 400;
     margin: 15px 0 5px 0;
-    color: #AF9483;
+    color: #af9483;
 }
 
 .testimonials .testimonial-item h4 {
@@ -1027,10 +1067,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .testimonials .owl-dot.active {
-    background-color: #AF9483;
+    background-color: #af9483;
 }
-
-
 
 /* ============================= */
 /* -------- Contact CSS -------- */
@@ -1059,12 +1097,12 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .contact .contact-info a:hover {
-    color: #AF9483;
+    color: #af9483;
 }
 
 .contact .contact-info i {
     width: 30px;
-    color: #AF9483;
+    color: #af9483;
 }
 
 .contact .social {
@@ -1080,15 +1118,15 @@ body.mobile-nav-active #mobile-nav-toggle {
     padding: 1px 0;
     text-align: center;
     font-size: 22px;
-    border: 1px solid #AF9483;
+    border: 1px solid #af9483;
 }
 
 .contact .social a i {
-    color: #AF9483;
+    color: #af9483;
 }
 
 .contact .social a:hover {
-    background: #AF9483;
+    background: #af9483;
 }
 
 .contact .social a:hover i {
@@ -1107,28 +1145,26 @@ body.mobile-nav-active #mobile-nav-toggle {
     font-weight: 300;
     padding: 10px 0;
     border: none;
-    border-bottom: 1px solid #AF9483;
+    border-bottom: 1px solid #af9483;
     border-radius: 0;
     box-shadow: none;
 }
 
 .contact .form button[type="submit"] {
     padding: 7px 30px 10px 30px;
-    color: #AF9483;
+    color: #af9483;
     letter-spacing: 1px;
     transition: 0.3s;
     cursor: pointer;
     border-radius: 0;
-    border: 1px solid #AF9483;
+    border: 1px solid #af9483;
     background: #ffffff;
 }
 
 .contact .form button[type="submit"]:hover {
-    background: #AF9483;
-    color: #FFFFFF;
+    background: #af9483;
+    color: #ffffff;
 }
-
-
 
 /* ============================= */
 /* --------- Footer CSS -------- */
