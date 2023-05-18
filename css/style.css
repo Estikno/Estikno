@@ -3,10 +3,12 @@
 /* ============================= */
 
 :root {
-    --Color1: 34, 40, 49;
-    --Color2: 57, 62, 70;
-    --Color3: 0, 173, 181;
-    --Color4: 238, 238, 238;
+    --Color1: 249, 252, 248;
+    --Color2: 18, 18, 18;
+    --Color2-variant: 30, 30, 30;
+    --Color3: 66, 145, 209;
+    --Color4: 250, 250, 249;
+    --Color5: 9, 125, 220;
 }
 
 body {
@@ -195,7 +197,7 @@ h6 {
 
 .header {
     /*background: #AF9483; */
-    background: rgb(var(--Color1));
+    background: rgb(var(--Color2));
     height: 70px;
 }
 
@@ -545,6 +547,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 .about {
     padding: 60px 0 15px 0;
     position: relative;
+    background: rgb(var(--Color2));
 }
 
 .about .row {
@@ -799,11 +802,12 @@ body.mobile-nav-active #mobile-nav-toggle {
     position: relative;
     text-align: center;
     color: #ffffff;
-    background: #af9483;
+    background: rgb(var(--Color2-variant));
 }
 
 .counters .counter .counter-icon-box {
-    color: #ffffff;
+    /*color: #ffffff;*/
+    color: rgb(var(--Color3));
     margin: 0;
     font-size: 50px;
     transition: all 400ms linear 0s;
@@ -847,6 +851,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     position: relative;
     clear: both;
     padding: 60px 0 30px 0;
+    background: rgb(var(--Color2));
 }
 
 .portfolio .section-header p {
@@ -1077,6 +1082,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 .contact {
     position: relative;
     padding: 60px 0;
+    background: rgb(var(--Color2-variant));
 }
 
 .contact .contact-info p {
