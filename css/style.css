@@ -4,6 +4,7 @@
 
 :root {
     --Color1: 249, 252, 248;
+    --Color1-variant: 188, 187, 200;
     --Color2: 18, 18, 18;
     --Color2-variant: 30, 30, 30;
     --Color3: 66, 145, 209;
@@ -12,7 +13,8 @@
 }
 
 body {
-    color: #666666;
+    /*color: #666666;*/
+    color: rgb(var(--Color1-variant));
     font-family: "Open Sans", sans-serif;
     font-weight: 300;
     background: #ffffff;
@@ -43,7 +45,8 @@ h4,
 h5,
 h6 {
     font-family: "Solway", serif;
-    color: #666666;
+    /*color: #666666;*/
+    color: rgb(var(--Color1));
     margin: 0 0 15px 0;
     padding: 0;
 }
@@ -51,7 +54,8 @@ h6 {
 .back-to-top {
     position: fixed;
     display: none;
-    background: #af9483;
+    /*background: #af9483;*/
+    background: rgb(var(--Color3));
     color: #ffffff;
     width: 44px;
     height: 44px;
@@ -491,17 +495,18 @@ body.mobile-nav-active #mobile-nav-toggle {
 .section-header h2,
 .section-header h3 {
     display: inline-block;
-    color: #af9483;
+    /*color: #af9483;*/
+    color: rgb(var(--Color1));
     font-size: 35px;
     text-transform: capitalize;
     text-align: left;
     font-weight: 700;
     position: relative;
     padding-bottom: 5px;
-    border-bottom: 1px solid #af9483;
+    /*border-bottom: 1px solid #af9483;*/
 }
 
-.section-header h2::before,
+/*.section-header h2::before,
 .section-header h3::before {
     content: "";
     position: absolute;
@@ -527,7 +532,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     border-top: 10px solid;
     border-left: 10px solid;
     border-color: transparent #af9483;
-}
+}*/
 
 .section-header p {
     text-align: left;
@@ -567,6 +572,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 .about h4 {
     font-size: 16px;
     font-weight: 400;
+    color: rgb(var(--Color1-variant));
 }
 
 .about p {
@@ -592,7 +598,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 .about .skills h3 {
     font-size: 22px;
     font-weight: 700;
-    color: #666666;
+    /*color: #666666;*/
+    color: rgb(var(--Color1));
     margin-bottom: 15px;
 }
 
@@ -603,6 +610,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 .about .skill-name p {
     display: inline-block;
+    color: #666666;
     margin-bottom: 5px;
     font-size: 16px;
     font-weight: 400;
@@ -614,12 +622,14 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 .about .progress {
     margin-bottom: 15px;
-    border-radius: 0;
+    border-radius: 1rem;
+    background-color: rgb(var(--Color2-variant));
 }
 
 .about .progress .progress-bar {
-    background: #af9483;
-    border-radius: 0;
+    /*background: #af9483;*/
+    background: rgb(var(--Color5));
+    border-radius: 1rem;
 }
 
 /* ============================= */
@@ -870,19 +880,29 @@ body.mobile-nav-active #mobile-nav-toggle {
     margin: 15px -3px 5px -3px;
     display: inline-block;
     padding: 10px 15px;
-    color: #af9483;
+    /*color: #af9483;*/
+    color: rgb(var(--Color5));
+    font-weight: 400;
     font-size: 14px;
     line-height: 15px;
     text-transform: uppercase;
-    border: 1px solid #af9483;
-    background: #ffffff;
+    /*border: 1px solid #af9483;*/
+    border-radius: .5rem;
+    /*background: #ffffff;*/
+    background: rgba(var(--Color5), 0.1);
     transition: all 0.3s ease-in-out;
+}
+
+.portfolio #portfolio-flters li:not(:first-child) {
+    margin-left: 10px;
 }
 
 .portfolio #portfolio-flters li:hover,
 .portfolio #portfolio-flters li.filter-active {
-    background: #af9483;
-    color: #ffffff;
+    /*background: #af9483;
+    color: #ffffff;*/
+    background: rgb(var(--Color5));
+    color: black;
 }
 
 .portfolio #portfolio-flters li:last-child {
