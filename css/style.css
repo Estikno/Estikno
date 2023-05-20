@@ -583,16 +583,21 @@ body.mobile-nav-active #mobile-nav-toggle {
 .about a {
     display: inline-block;
     padding: 6px 20px;
-    color: #af9483;
+    /*color: #af9483;*/
+    color: rgb(var(--Color5));
     font-size: 16px;
     font-weight: 400;
     letter-spacing: 1px;
-    border: 1px solid #af9483;
+    /*border: 1px solid #af9483;*/
+    border-radius: .5rem;
+    background: rgba(var(--Color5), 0.1);
 }
 
 .about a:hover {
-    color: #ffffff;
-    background: #af9483;
+    /*color: #ffffff;
+    background: #af9483;*/
+    background: rgb(var(--Color5));
+    color: black;
 }
 
 .about .skills h3 {
@@ -916,7 +921,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .portfolio .portfolio-item figure {
-    background: #af9483;
+    /*background: #af9483;*/
+    background: rgb(var(--Color2-variant));
     overflow: hidden;
     height: 220px;
     position: relative;
@@ -939,7 +945,10 @@ body.mobile-nav-active #mobile-nav-toggle {
     text-align: center;
     width: 60px;
     height: 40px;
-    background: #ffffff;
+    /*background: #ffffff;*/
+    background: rgb(var(--Color5));
+    color: black;
+    border-radius: 5rem;
     transition: 0.2s linear;
 }
 
@@ -951,7 +960,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 .portfolio .portfolio-item figure .link-preview:hover,
 .portfolio .portfolio-item figure .link-details:hover {
-    background: #af9483;
+    background: rgb(var(--Color3));
 }
 
 .portfolio .portfolio-item figure .link-preview:hover i,
@@ -977,11 +986,12 @@ body.mobile-nav-active #mobile-nav-toggle {
     right: 0;
     top: 100%;
     padding: 30px 10px;
-    color: #666666;
+    /*color: #666666;*/
+    color: rgb(var(--Color1-variant));
     font-size: 18px;
     font-weight: 400;
     text-transform: capitalize;
-    background: rgba(256, 256, 256, 0.8);
+    background: rgba(var(--Color2-variant), 0.8);
     border-radius: 0;
 }
 
@@ -1204,7 +1214,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .footer .copyright p {
-    color: #999999;
+    /*color: #999999;*/
+    color: rgb(var(--Color1-variant));
     font-size: 18px;
     font-weight: 300;
 }
