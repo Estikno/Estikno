@@ -47,9 +47,9 @@
 <p align="center">
   <!--- stats (start) -->
 <a href="https://github.com/Estiknok">
-  <img align="center" height="150em" src="https://github-readme-stats.vercel.app/api?username=Estiknok&theme=dark&show_icons=true&count_private=true" />
+  <img align="center" height="150em" src="https://github-readme-stats-estiknok.vercel.app/api?username=Estiknok&theme=dark&show_icons=true&count_private=true" />
 
-  <img align="center" height="150em" src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=Estiknok&layout=compact&langs_count=8&theme=dark"/>
+  <img align="center" height="150em" src="https://github-readme-stats-estiknok.vercel.app/api/top-langs/?username=Estiknok&layout=compact&langs_count=8&theme=dark"/>
 </a>
 <!--- stats (end) -->
 
