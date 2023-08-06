@@ -30,7 +30,7 @@
 
 ### 👨🏻‍💻 &nbsp;About Me
 
-- 🔭 I’m currently working on a chat application called **Kyodo**, which uses theese technologies **React, Nodejs, Vite, Graphql, MongoDB**
+- 🔭 I’m currently working on a multiplayer fps game called **Deadlock**, which uses theese technologies **Unity, .NET, Riptide**
 
 - 🌱 I’m currently learning **to put together multiple Hyper Beast Stack for Scalable Applications.**
 
