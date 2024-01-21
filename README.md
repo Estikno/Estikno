@@ -71,7 +71,7 @@
 
 <p align="center">
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=git,aws,gcp,raspberrypi,unity,css,discord,docker,express,figma,firebase,github,html,js,vite,kotlin,linux,materialui,mongodb,mysql,nextjs,nodejs,apollo,postman,py,bash,cs,dotnet,react,redux,tailwind,ts,vscode&perline=14" />
+    <img src="https://skillicons.dev/icons?i=git,raspberrypi,unity,css,docker,express,figma,firebase,github,html,js,vite,kotlin,linux,materialui,mongodb,mysql,nextjs,nodejs,apollo,postman,py,bash,cs,dotnet,react,redux,tailwind,ts,vscode&perline=14" />
   </a>
 </p>
 
