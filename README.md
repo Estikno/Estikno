@@ -36,7 +36,7 @@
 
 - ☁️ I've keen interest in cloud computing. So,I'm learning **AWS** and **Google Cloud Platform**
 
-- 📫 Feel free to reach me out **daviddidenco84@gmail.com**
+[//]: <> (- 📫 Feel free to reach me out **daviddidenco84@gmail.com**)
 <!--Intro end-->
 
 
