@@ -36,7 +36,7 @@
 
 - ☁️ I've keen interest in cloud computing. So,I'm learning **AWS** and **Google Cloud Platform**
 
-- 📫 Feel free to reach me out **kyodokd@gmail.com**
+- 📫 Feel free to reach me out **daviddidenco84@gmail.com**
 <!--Intro end-->
 
 
@@ -46,7 +46,7 @@
 
 <p align="center">
   <!--- stats (start) -->
-<a href="https://github.com/Estiknok">
+<a href="https://github.com/Estikno">
   <img align="center" height="180em" src="https://github-readme-stats-mympruodt-estiknok.vercel.app/api?username=Estikno&theme=dark&show_icons=true&count_private=true" />
 
   <img align="center" height="180em" src="https://github-readme-stats-mympruodt-estiknok.vercel.app/api/top-langs/?username=Estikno&layout=compact&langs_count=8&theme=dark"/>
