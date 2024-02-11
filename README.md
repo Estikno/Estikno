@@ -80,6 +80,6 @@
 <!--horizontal divider(gradiant)-->
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
 
-Credit: [Estiknok](https://github.com/Estiknok)
+Credit: [Estikno](https://github.com/Estikno)
 
-Last Edited on: 13/5/2023
+Last Edited on: 11/2/2024
