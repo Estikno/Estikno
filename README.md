@@ -32,9 +32,9 @@
 
 - 🔭 I’m currently working on a multiplayer fps game called **Deadlock**, which uses theese technologies **Unity, .NET, Riptide**
 
-- 🌱 I’m currently learning **to put together multiple Hyper Beast Stack for Scalable Applications.**
+- 🌱 I’m currently learning **all about networking.**
 
-- ☁️ I've keen interest in cloud computing. So,I'm learning **AWS** and **Google Cloud Platform**
+- ☁️ I've keen interest in cloud computing. So, I'm learning **AWS** and **Google Cloud Platform**
 
 - 🚀 You can also check out my portfolio and blog: [Blog and Portfolio](https://estikno.github.io)
   
