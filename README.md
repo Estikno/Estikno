@@ -36,7 +36,7 @@
 
 - ☁️ I've keen interest in cloud computing. So, I'm learning **AWS** and **Google Cloud Platform**
 
-- 🚀 You can also check out my portfolio and blog: [Blog and Portfolio](https://estikno.github.io)
+<!--- 🚀 You can also check out my portfolio and blog: [Blog and Portfolio](https://estikno.github.io)-->
   
 <!--Intro end-->
 
