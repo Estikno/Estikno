@@ -30,7 +30,7 @@
 
 ### 👨🏻‍💻 &nbsp;About Me
 
-- 🔭 I’m currently working on a multiplayer fps game called **Deadlock**, which uses theese technologies **Unity, .NET, Riptide**
+- 🔭 I’m currently working on a multiplayer fps game, which uses theese technologies **Unity, .NET, Riptide**
 
 - 🌱 I’m currently learning **all about networking.**
 
