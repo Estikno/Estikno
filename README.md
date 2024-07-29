@@ -50,7 +50,7 @@
 <a href="https://github.com/Estikno">
   <img align="center" height="180em" src="https://github-readme-stats-mympruodt-estiknok.vercel.app/api?username=Estikno&theme=dark&show_icons=true&count_private=true" />
 
-  <img align="center" height="180em" src="https://github-readme-stats-mympruodt-estiknok.vercel.app/api/top-langs/?username=Estikno&layout=compact&langs_count=8&theme=dark"/>
+  <img align="center" height="180em" src="https://github-readme-stats-mympruodt-estiknok.vercel.app/api/top-langs/?username=Estikno&layout=compact&langs_count=8&theme=dark&hide=html,xslt"/>
 </a>
 <!--- stats (end) -->
 
