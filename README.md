@@ -30,11 +30,11 @@
 
 ### 👨🏻‍💻 &nbsp;About Me
 
-- 🔭 I’m currently working on a multiplayer fps game, which uses theese technologies **Unity, .NET, Riptide**
+- 🔭 I’m currently working on a simple 2D game engine in **Rust**.
 
-- 🌱 I’m currently learning **all about networking.**
+- 🌱 I’m currently learning **ECS, rendering and physics in games**
 
-- ☁️ I've keen interest in cloud computing. So, I'm learning **AWS** and **Google Cloud Platform**
+- ☁️ I've keen interest in cloud computing. So, I'm also learning **AWS** and **Google Cloud Platform**
 
 <!--- 🚀 You can also check out my portfolio and blog: [Blog and Portfolio](https://estikno.github.io)-->
   
@@ -83,4 +83,4 @@
 
 Credit: [Estikno](https://github.com/Estikno)
 
-Last Edited on: 11/2/2024
+Last Edited on: 23/08/2024
