@@ -72,7 +72,7 @@
 
 <p align="center">
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=rust,git,raspberrypi,unity,css,docker,express,gcp,astro,figma,github,html,ts,vite,linux,materialui,mongodb,mysql,nextjs,nodejs,apollo,postman,py,bash,cs,dotnet,react,redux,tailwind,js,vscode,graphql,prisma&perline=14" />
+    <img src="https://skillicons.dev/icons?i=cpp,rust,git,unity,docker,gcp,astro,ts,linux,mysql,nextjs,nodejs,apollo,py,bash,cs,dotnet,react,tailwind,graphql,prisma&perline=14" />
   </a>
 </p>
 
