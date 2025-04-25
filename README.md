@@ -30,7 +30,7 @@
 
 ### 👨🏻‍💻 &nbsp;About Me
 
-- 🔭 I’m currently working on a simple 2D game engine in **Rust** and uses **SDL2**.
+- 🔭 I’m currently working on a simple 2D game engine in **C++**.
 
 - 🌱 I’m currently learning **ECS, rendering and physics in games**
 
