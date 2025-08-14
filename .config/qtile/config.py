@@ -354,7 +354,7 @@ custom_bar_settings = [
     ),
     # ---------------WIFI-----------------
     widget.Sep(linewidth=0, padding=15),
-    widget.Net(foreground=catppuccin["lavender"], format="{down} ↓↑ {up}"),
+    widget.Net(foreground=catppuccin["lavender"], format="{down:3.1f} ↓↑ {up:3.1f}"),
     # --------------BATTERY----------------
     widget.Sep(linewidth=0, padding=15),
     BatteryIcon(update_interval=0.1, foreground=catppuccin["lavender"], fontsize=15),
