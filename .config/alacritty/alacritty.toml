@@ -18,7 +18,7 @@ family = "JetBrainsMono Nerd Font Mono"
 style = "Regular"
 
 [window]
-padding.x = 2
-padding.y = 2
+padding.x = 5
+padding.y = 5
 
 opacity = 0.8
