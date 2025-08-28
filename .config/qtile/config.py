@@ -36,7 +36,7 @@ from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from libqtile.lazy import lazy
 from libqtile.utils import guess_terminal
 
-from widgets import BatteryIcon, VolumeIcon
+from widgets import VolumeIcon, BatteryIcon
 
 
 # Autostart script
@@ -79,7 +79,9 @@ catppuccin = {
 mod = "mod4"
 terminal = "alacritty"
 browser = "brave"
-wallpaper = os.path.join(Path.home(), "Backgrounds", "main_background.jpg")
+wallpaper = os.path.join(Path.home(), "Wallpapers", "death_note.jpg")
+does_have_battery = False
+does_have_brightness = False
 
 keys = [
     # A list of available commands that can be bound to keys can be found
@@ -162,36 +164,42 @@ keys.extend(
         Key(
             [],
             "XF86AudioMute",
-            lazy.spawn("amixer -q set Master toggle"),
+            lazy.spawn("pamixer -t"),
             desc="Toggle mute and unmute",
         ),
         Key(
             [],
             "XF86AudioLowerVolume",
-            lazy.spawn("amixer -c 0 sset Master 1- unmute"),
+            lazy.spawn("pamixer -d 2"),
             desc="Lower volume",
         ),
         Key(
             [],
             "XF86AudioRaiseVolume",
-            lazy.spawn("amixer -c 0 sset Master 1+ unmute"),
+            lazy.spawn("pamixer -i 2"),
             desc="Raise volume",
-        ),
-        # Brightness
-        Key(
-            [],
-            "XF86MonBrightnessUp",
-            lazy.spawn("brightnessctl s +5%"),
-            desc="Increase screen drightness",
-        ),
-        Key(
-            [],
-            "XF86MonBrightnessDown",
-            lazy.spawn("brightnessctl s 5%-"),
-            desc="Lower screen brightness",
         ),
     ]
 )
+
+if does_have_brightness:
+    keys.extend(
+        [
+            # Brightness
+            Key(
+                [],
+                "XF86MonBrightnessUp",
+                lazy.spawn("brightnessctl set +5%"),
+                desc="Increase brightness",
+            ),
+            Key(
+                [],
+                "XF86MonBrightnessDown",
+                lazy.spawn("brightnessctl set 5%-"),
+                desc="Decrease brightness",
+            ),
+        ]
+    )
 
 # Add key bindings to switch VTs in Wayland.
 # We can't check qtile.core.name in default config as it is loaded before qtile is started
@@ -334,9 +342,9 @@ custom_bar_settings = [
         update_interval=0.1,
         foreground=catppuccin["lavender"],
         fontsize=20,
-        mouse_callbacks={"Button1": lazy.spawn("amixer -q set Master toggle")},
+        mouse_callbacks={"Button1": lazy.spawn("pamixer -t")},
     ),
-    widget.Volume(),
+    widget.PulseVolume(),
     # ---------------CPU------------------
     widget.Sep(linewidth=0, padding=15),
     widget.CPU(foreground=catppuccin["lavender"], format="CPU: {load_percent}%"),
@@ -355,24 +363,37 @@ custom_bar_settings = [
     # ---------------WIFI-----------------
     widget.Sep(linewidth=0, padding=15),
     widget.Net(foreground=catppuccin["lavender"], format="{down:3.1f} ↓↑ {up:3.1f}"),
-    # --------------BATTERY----------------
-    widget.Sep(linewidth=0, padding=15),
-    BatteryIcon(update_interval=0.1, foreground=catppuccin["lavender"], fontsize=15),
-    widget.Battery(
-        charge_char="󰂅",
-        discharge_char="󰁹",
-        full_char="󰁹",
-        low_foreground=catppuccin["red"],
-        low_percentage=0.2,
-        battery=0,
-        format="{percent:2.0%}",
-    ),
-    # ---------------CLOCK-----------------
-    widget.Sep(linewidth=0, padding=15),
-    widget.TextBox(text="", foreground=catppuccin["lavender"], fontsize=15),
-    widget.Clock(format="%d-%m-%Y %a %H:%M"),
-    widget.Spacer(length=5),
 ]
+
+if does_have_battery:
+    custom_bar_settings.extend(
+        [
+            # --------------BATTERY----------------
+            widget.Sep(linewidth=0, padding=15),
+            BatteryIcon(
+                update_interval=0.1, foreground=catppuccin["lavender"], fontsize=15
+            ),
+            widget.Battery(
+                charge_char="󰂅",
+                discharge_char="󰁹",
+                full_char="󰁹",
+                low_foreground=catppuccin["red"],
+                low_percentage=0.2,
+                # battery=0,
+                format="{percent:2.0%}",
+            ),
+        ]
+    )
+
+custom_bar_settings.extend(
+    [
+        # ---------------CLOCK-----------------
+        widget.Sep(linewidth=0, padding=15),
+        widget.TextBox(text="", foreground=catppuccin["lavender"], fontsize=15),
+        widget.Clock(format="%d-%m-%Y %a %H:%M"),
+        widget.Spacer(length=5),
+    ]
+)
 
 screens = [
     Screen(
@@ -384,7 +405,7 @@ screens = [
         ),
         # background="#000000",
         wallpaper=wallpaper,
-        wallpaper_mode="center",
+        wallpaper_mode="fill",
         # You can uncomment this variable if you see that on X11 floating resize/moving is laggy
         # By default we handle these events delayed to already improve performance, however your system might still be struggling
         # This variable is set to None (no cap) by default, but you can set it to 60 to indicate that you limit it to 60 events per second
@@ -422,6 +443,8 @@ floating_layout = layout.Floating(
         Match(wm_class="ssh-askpass"),  # ssh-askpass
         Match(title="branchdialog"),  # gitk
         Match(title="pinentry"),  # GPG key password entry
+        # Custom (Game engine development)
+        Match(title="Axle Engine"),
     ]
 )
 auto_fullscreen = True

@@ -6,8 +6,6 @@ import os
 
 from libqtile.widget import base
 
-env = os.environ.copy()
-
 
 class BatteryIcon(base.ThreadPoolText):
     charging_icons = ["󰢟", "󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"]
@@ -61,30 +59,20 @@ class VolumeIcon(base.ThreadPoolText):
         return self.volume_icons[index]
 
     def get_volume(self):
-        result = subprocess.run(
-            ["amixer", "sget", "Master"], encoding="utf-8", capture_output=True
-        ).stdout
-
-        for line in result.splitlines():
-            if "Left:" in line or "Mono:" in line:
-                # Example: "  Front Left: Playback 74 [58%] [-13.50dB] [on]"
-                try:
-                    percent_str = line.split("[")[1].split("%")[0]
-                    return int(percent_str)
-                except (IndexError, ValueError):
-                    pass
-
-        return 0  # fallback if parsing fails
+        try:
+            result = subprocess.run(
+                ["pamixer", "--get-volume"], encoding="utf-8", capture_output=True
+            ).stdout
+            return int(result.strip())
+        except Exception:
+            return 0  # fallback if parsing fails
 
     def get_muted(self):
-        info = subprocess.run(
-            ["pactl", "get-sink-mute", "@DEFAULT_SINK@"],
-            encoding="utf-8",
-            capture_output=True,
-            env=env,
-        ).stdout.strip()
-        return info.lower() == "mute: yes"
-        # return info.decode("utf-8").replace("\n", "") == "true"
+        try:
+            info = subprocess.run(["pamixer", "--get-mute"], capture_output=True).stdout
+            return info.decode("utf-8").replace("\n", "") == "true"
+        except Exception:
+            return False
 
 
 # class WiFiIcon(base.ThreadPoolText):
