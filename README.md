@@ -16,27 +16,17 @@
 </div>
 
 
-<!--h2 without bottom border-->
-<div id="user-content-toc">
-  <ul align="center">
-    <summary><h2 style="display: inline-block">Confusion is part of Programming</h2></summary>
-  </ul>
-</div>
-
-
 
 <!--Intro start-->
 <img align="right" width=200px height=200px alt="side_sticker" src="https://media.giphy.com/media/TEnXkcsHrP4YedChhA/giphy.gif" />
 
 ### 👨🏻‍💻 &nbsp;About Me
 
-- 🔭 I’m currently working on a simple 2D game engine in **C++**.
+- 🔭 I’m currently working on a simple game engine in **C++**.
 
-- 🌱 I’m currently learning **ECS, rendering and physics in games**
+- 🌱 I’m currently learning **Multithreading and rendering in low level applications**
 
 - ☁️ I've keen interest in cloud computing. So, I'm also learning **AWS** and **Google Cloud Platform**
-
-<!--- 🚀 You can also check out my portfolio and blog: [Blog and Portfolio](https://estikno.github.io)-->
   
 <!--Intro end-->
 
