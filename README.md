@@ -26,7 +26,7 @@
 
 - 🌱 I’m currently learning **Multithreading and rendering in low level applications**
 
-- ☁️ I've keen interest in cloud computing. So, I'm also learning **AWS** and **Google Cloud Platform**
+<!--- ☁️ I've keen interest in cloud computing. So, I'm also learning **AWS** and **Google Cloud Platform**-->
   
 <!--Intro end-->
 
@@ -73,4 +73,4 @@
 
 Credit: [Estikno](https://github.com/Estikno)
 
-Last Edited on: 23/08/2024
+Last Edited on: 16/06/2026
